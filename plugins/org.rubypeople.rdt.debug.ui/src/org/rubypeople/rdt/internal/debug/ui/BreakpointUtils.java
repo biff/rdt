@@ -107,6 +107,10 @@ public class BreakpointUtils
 				member = (IMember) member.getPrimaryElement();
 			}
 		}
+		if (member == null)
+		{
+			return ResourcesPlugin.getWorkspace().getRoot();
+		}
 		IResource res = member.getResource();
 		if (res == null)
 		{
